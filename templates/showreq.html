@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        <li>UA:{{ ua }}</li>
+        <li>path:{{ path }}</li>
+        <li>referrer:{{ referrer }}</li>
+        <li>ra:{{ ra }}</li>
+    </ul>
+
+    <p><h3>The Request.META is as following:</h3></p>
+    <table>
+        {% for k, v in reqmeta.items %}
+            <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}
